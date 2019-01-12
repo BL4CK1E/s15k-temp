@@ -1,0 +1,68 @@
+.opening-hours-wrapper {
+    display: flex;
+    font-size: 24px;
+    font-family: 'Amatic SC', cursive;
+    margin-top: 24px;
+    position: relative;
+    animation: fadeIn 3s 1 forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1.0;
+    }
+}
+
+.opening-hours-wrapper:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 250px;
+    background: rgb(189, 189, 189);
+    top: -15px;
+    animation: bounceIn 4s 1 forwards;
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        left: -200px;
+        width: 750px;
+    }
+    to {
+        opacity: 1.0;
+        left: 0;
+        width: 250px;
+    }
+}
+
+.opening-hours-wrapper div {
+    padding: 5px;
+}
+
+.opening-hours-left {
+    font-weight: bold;
+    width: 85px;
+    text-align: right;
+}
+
+.opening-hours-wrapper p {
+    margin: 2px;
+}
+
+.opening-hours-left p:nth-of-type(1) {
+    margin-bottom: 34px;
+}
+
+.opening-hours-left p:nth-last-of-type(1), .opening-hours-right p:nth-last-of-type(1) {
+    opacity: 0.25;
+}
+
+.opening-hours-right {
+    width: 130px;
+}
